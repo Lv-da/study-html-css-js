@@ -1,0 +1,190 @@
+<!--
+    样式设置在style标签中
+    
+    基础语法 格式
+        选择器{属性:值;属性:值;}
+        {}括起来，以分号结尾
+        建议一行写一个声明
+        如果属性值以多个单词组成，要给值加上引号
+        报错可以看浏览器console
+    /*注释*/
+
+    css的试用
+        行内式
+            <p style="color:red;">行内式</p>
+            将样式定义在标签上的style属性中
+        嵌入式
+            在head标签中嵌套style标签，在style标签中通过选择器的方式调用指定元素并设置相关css
+            <style type="text/css">
+                p{
+                    color:red;
+                }
+            </style>
+        引入外联样式文件
+            在head标签中嵌套link标签，在link标签中指定外联样式文件，并设置相关css
+            rel:当前文件与引入文件之间的关系
+            type：类型，css类型
+            href：引入的资源的路径
+        
+        优先级 就近原则
+
+    选择器
+            基本选择器
+            通用选择器 
+                *{
+                    属性:值;
+                } 
+                选择所有元素
+            元素选择器/标签选择器
+                标签名{
+                    属性:值;
+                }
+                选择指定元素
+            id选择器
+                #id{
+                    属性:值;
+                }
+                选择id为id的元素 id值最好保持唯一 不识别数字id
+                id定义规则：以字母数字下划线中划线组成，不要以数字开头
+            类选择器
+                .class{
+                    属性:值;
+                }
+                选择class为class的元素
+                class定义规则：以字母数字下划线中划线组成，不要以数字开头
+            分组选择器
+                选择指定选择器中的元素
+                选择器1,选择器2{
+                    属性:值;
+                }
+
+            优先级问题（有权重）
+                id选择器 100> 类选择器 10> 元素选择器 1> 通用选择器 无权重
+                行内样式 style属性 1000
+    组合选择器(后代选择器，子元素选择器，相邻兄弟选择器，普通兄弟选择器)
+        后代选择器
+            选择指定元素的所有后代元素，以空格分隔
+            指定元素 指定后代元素{
+                属性:值;
+            }
+
+        子元素选择器
+            选择指定元素的第一代元素，以大于号分隔
+            指定元素 > 指定子元素{
+                属性:值;
+            }
+        
+        相邻兄弟选择器
+            选择指定元素的相邻的下一个元素（有相同的父元素，一定要相邻），只会向下找一个，加号
+            指定元素 + 指定相邻兄弟元素{
+                属性:值;
+            }
+
+        普通兄弟选择器
+            选择指定元素的后面的同级元素（后面的都找），波浪号
+            指定元素 ~ 指定相邻兄弟元素{
+                属性:值;
+            }
+        
+        兄弟选择器都是只找下面的，因为代码从上往下走
+
+    背景
+        background-color
+        background-image
+        background-repeat
+        background-size
+    文本
+        color
+        text-align
+        text-decoration
+            none
+            underline
+            overline
+            line-through
+            blink
+        text-decoration：underline overline line-through；
+        去除文本修饰
+            text-decoration:none;
+        text-indent 首行缩进（em：一个文字的高度 ）
+    字体
+        font-family(包含空格时需要用引号括起来,有后备机制，多个属性值时以逗号隔开,
+                    如font-family：“字体1”，“字体2”；)
+        font-size 字体大小
+        font-style  字体样式
+            normal
+            italic 斜体
+            oblique 强制倾斜
+        font-weight 字体粗细 100~900值越大字体越粗，默认400，700粗体
+            normal
+            bold粗体
+            bolder
+            lighter
+    
+    对齐方式
+        text-align
+            left
+            right
+            center
+            justify
+    display 属性    定义元素的显示方式
+        block   定义为 块级元素 ，即元素独占一行
+        inline  定义为 内联元素 ，即元素在一行中显示
+        inline-block    定义为行内块级元素，即元素独占一行，但是可以被其他元素填充
+        none    定义为 不显示元素
+        P.S. 块级元素可以设置宽和高、元素会自动换行，而行内元素不行
+                行内块级元素可以设置宽和高、元素不会自动换行，可以被其他元素填充
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="stylesheet" type="text/CSS" href="../css/helloworld.css">
+    <style type="text/CSS">
+        *{
+            color:#0fc;
+        }
+        body{
+            background-color: lightgoldenrodyellow;/*背景颜色*/
+            color: red;/*字体颜色*/
+            font-family: "Arial black";/*字体*/
+            margin: 0;/*外边距*/
+            background-repeat: no-repeat;
+        }
+        p{
+            color:black;
+        }
+        div{
+            width: 200px;
+            height: 200px;
+            border: #0fc;
+            background: dodgerblue;
+        }
+        #abcd{
+            background: sandybrown;
+        }
+        .dcba{
+            background: #000;
+            font-weight: bold;
+        }
+        #abcd,.dcba{
+            border: 10px solid #0fc;
+        }
+    </style>
+</head>
+<body>
+    hello
+    <p style="color:darkslategrey;font-family:楷体;font-size: xx-large;">世界</p>
+    waou
+    <p style="background-color: black; width: 50px;">你好，世界！</p>
+    <div>
+        div1
+    </div>
+    <div id="abcd">div2</div>
+    <div>div3</div>
+    <div class="dcba">div4</div>
+    <div>div5</div>
+</body>
+</html>

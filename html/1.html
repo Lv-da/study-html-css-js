@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实验1</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #Menu{
+            list-style: none;
+            float: left;
+            margin-top: 0px;
+            background: red;
+            /* border-radius: 10px; */
+            /* margin-left: 10px;
+            margin-right: 10px; */
+            width:100%;    
+        }
+        #Menu li{
+            display: inline;
+            background-color: red; 
+            border: 2px solid red;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 0px 0px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+        #Menu li:hover{
+            background-color: orange;
+            color: black;
+        }
+        body{
+            /* background: lightyellow; */
+            background-image: linear-gradient(to right, aquamarine, lightskyblue);
+            /* background-size: contain;
+            background-repeat: no-repeat; */
+        }
+        #Left{
+            float: left;
+            list-style: none;
+            background: white;
+            display: inline;
+            width: 10%;
+            /* margin: 0; */
+            margin-left: 0;
+            position: fixed;
+            top: 10%;
+            left: 0;
+            width: 10%;
+            padding: 0;
+            list-style-position: inside;
+        }
+        #Left li{
+            /* margin-left: 30px; */
+            /* text-align: center; */
+            list-style: disc ;
+            list-style-position: inside;
+            background: white;
+            /* list-style: disc; */
+            margin-top: 0px;
+            padding: 8px 32px;
+            transition-duration: 0.4s;
+            border-bottom: 1px dashed black;
+            cursor: pointer;
+        }
+        #Left li:hover{
+            background-color: rgba(255, 0, 0, 0.185);
+            color: white;
+        }
+        p{
+            margin: 10px;
+        }
+        table{
+            border: 1px solid black;
+            width: 100%;
+            height: 100%;
+        }
+        #restName{
+            color:white;
+            background-color: rgb(155, 155, 155);
+            width: 75%;
+            cursor: pointer;
+            transition-duration: 0.4s;
+        }
+        #restName:hover{
+            background-color: rgb(255, 255, 210);
+            color: black;
+        }
+        .mian,.mian p{
+            float: left;
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            
+        }
+    </style>
+</head>
+<body>
+    <!-- <h1 align="center">美食列表</h1> -->
+    <div>
+        <div>
+            <ul id="Menu">
+                <a href="https://owo.lvda.life" target="_blank"><li>首页</li></a>
+                <li>美食</li>
+                <li>今日新单</li>
+                <li>团购</li>
+                <li>身边外卖</li>
+                <li>休闲娱乐</li>
+                <li>生活服务</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div>
+        <ul id="Left">
+            <li style="text-align:left; margin:0; list-style: none; background: red; color: white;border-radius:0 0 20px 0;">按地区</li>
+            <li>火锅</li>
+            <li>日韩料理</li>
+            <li>西餐</li>
+            <li>小吃快餐</li>
+            <li>自助餐</li>
+            <li style="text-align:left; margin:0; list-style: none; background: red; color: white;border-radius:0 0 20px 0;">按地区</li>
+            <li>市北区</li>
+            <li>市南区</li>
+            <li>李沧区</li>
+            <li>崂山区</li>
+            <li>黄岛区</li>
+        </ul>
+    </div>
+    <div>
+        <ul></ul>
+    </div>
+    <div class="mian">
+        <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+    </div>
+    <!-- <div>
+        <div style="margin-left: 200px;margin-top:150px;background: rgb(255, 255, 168);border-radius: 10px;">
+            <p style="font-size: larger;"><strong>美食</strong></p>
+            <table id="table">
+                <tr>
+                    <td>
+                        <p><img src="../imgs/土大力休闲餐厅.png" alt="图1" /></p>
+                        <p id="restName" >土大力休闲餐厅</p>
+                        <span style="float: left;margin-left: 10%;font-size: small;"><strong>￥85</strong>起</span>
+                        <span style="float: right;margin-right: 30%;color: gray;font-size: small;">已售1875</span>
+                    </td>
+                    <td>
+                        <p><img src="../imgs/粥全粥到.png" alt="图2" /></p>
+                        <p id="restName" >粥全粥到</p>
+                        <span style="float: left;margin-left: 10%;font-size: small;"><strong>￥88</strong>起</span>
+                        <span style="float: right;margin-right: 30%;color: gray;font-size: small;">已售12455</span>
+                    </td>
+                    <td>
+                        <p><img src="../imgs/味为先豆腐脑.png" alt="图3" /></p>
+                        <p id="restName" >味为先豆腐脑</p>
+                        <span style="float: left;margin-left: 10%;font-size: small;"><strong>￥9</strong>起</span>
+                        <span style="float: right;margin-right: 30%;color: gray;font-size: small;">已售41875</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <P><img src="../imgs/望湘园.png" alt="图4" /></P>
+                        <p id="restName" >望湘园</p>
+                        <span style="float: left;margin-left: 10%;font-size: small;"><strong>￥90</strong>起</span>
+                        <span style="float: right;margin-right: 30%;color: gray;font-size: small;">已售4965</span>
+                    </td>
+                    <td>
+                        <p><img src="../imgs/彤德莱.png" alt="图5" /></p>
+                        <p id="restName" >彤德莱</p>
+                        <span style="float: left;margin-left: 10%;font-size: small;"><strong>￥89</strong>起</span>
+                        <span style="float: right;margin-right: 30%;color: gray;font-size: small;">已售18875</span>
+                    </td>
+                    <td>
+                        <p><img src="../imgs/赛百味.png" alt="图6" /></p>
+                        <p id="restName" >赛百味</p>
+                        <span style="float: left;margin-left: 10%;font-size: small;"><strong>￥19.9</strong>起</span>
+                        <span style="float: right;margin-right: 30%;color: gray;font-size: small;">已售2891</span>
+                    </td>  
+                </tr>
+            </table>
+        </div>
+    </div> -->
+</body>
+</html>

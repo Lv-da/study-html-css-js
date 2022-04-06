@@ -1,0 +1,438 @@
+<!DOCTYPE html><!--html5版本声明-->
+<html lang="en">
+<head><!--头部区域--><!--浏览器不可见内容-->
+    <meta charset="UTF-8"><!--表示编码格式>-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>helloworld</title><!--页面标题-->
+    <link rel="stylesheet" href="../css/helloworld.css"><!--引入css文件的路径-->
+    <script src="../js/helloworld.js"></script><!--引入js文件的路径-->
+</head>
+<body bgcolor="" text=""><!--主体区域浏览器可见内容-->
+    
+    <a name="author">锚点</a>
+    <br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br>
+    Hello world!<br>
+    1212<br>
+    <strong>
+        1212<br>
+        123<br>
+    </strong>
+    233<hr width="50%" align="right" size="10"/>
+    233<hr width="500px" align="left"/>
+    <p>abcdefg</p>
+    <p id="mdmd3">锚点3</p>
+    <a name="2">锚点2</a>
+    <p align="justify">12333333333333333333</p>
+    <hr/>
+    <ul type="square">
+        <li>列表项</li>
+        <li>列表项</li>
+    </ul>
+    <ol type="I">
+        <li>列表项</li>
+        <li>列表项</li>
+    </ol>
+    <div>hello</div>
+    world
+    <hr>
+    <span>hello</span>
+    world <br>
+    <font color="red" size="7" face="楷体">你好</font>
+    <pre>1       2</pre>
+    1          2<br>
+    <b>粗体</b>或者<strong>粗体</strong><br>
+    <i>斜体</i>或<em>斜体</em><br>
+    <u>下划线</u><br>
+    <del>删除线</del><br>
+    <sub>下标</sub>H<sub>2</sub>O<sup>上标</sup><br>
+    <hr>
+    <a href="http://www.baidu.com">百度</a>
+    <a href="../js/helloworld.js">js</a>
+    <a href="http://www.bilibili.com" target="_blank">bilibili</a>
+    <a href="http://www.bilibili.com" target="_self">bilibili</a>
+    <a href="#">锚点</a><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <a href="#author">锚点</a>
+    <a href="#2">锚点2</a>
+    <a href="#mdmd3">锚点3</a><br>
+    <img src="../imgs/1.png" alt="图片描述" />
+    <a href="#2"><img src="https://www.baidu.com/img/flexible/logo/pc/result.png" title="图片描述" /></a>
+    <img src="https://i2.hdslb.com/bfs/garb/item/3e66e712b8e70c6b02393c54ad5fd8d993eb39f9.png@360w_360h.webp" alt="你图裂了" />
+    <font color="lightblue"><img src="../imgs/1.png" width="100px" height="100px" border="10"/></font>
+    <div>
+        11111
+        <img src="../imgs/1.png" width="100px" height="100px" border="10" align="absbottom"/>
+        <!--align规定周围的文本如何来排列-->
+        2222
+    </div>
+    <table border="13" width="10%" height="200px" style="border-collapse:collapse;" align=""  bordercolor="aqua">
+        <tr>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>性别</th>
+        </tr>
+        <tr align="middle" valign="middle" bgcolor="red">
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr align="left" valign="top">
+            <td>4</td>
+            <td bgcolor="aqua">5</td>
+            <td>6</td>
+        </tr><br>
+
+        <form name="abc" action="https://owo.lvda.life" method="get" target="_self">
+            username<input type="text" name="username" value="Lv_da" /><!--id属性是所有标签都有，用来标识元素唯一性的-->
+            password<input type="password" name="password" value="lv" /><!--name属性是提交数据时的参数名-->
+            <input type="submit" value="提交" />
+            <!-- <button>提交</button> -->
+        </form><br><!--get请求与post请求的区别 1、post请求需要服务器支持 
+                                            2、get请求时参数会跟在地址栏后面，
+                                                post请求不会（post请求会将数据存放在请求体中）
+                                            3、get请求相对post请求而言不那么安全
+                                            4、get请求传递的数据长度时有限的，而post基本没有限制（与服务器相关）
+                                            5、get请求比post请求快（2倍左右）
+                                            6、get请求有缓存（会将数据存放在浏览器中，即本地磁盘中，post无缓存）
+                                            -->
+        <form action="https://www.baidu.com/s" method="get" target="_blank">
+            <input type="text" name="wd" />
+            <input type="submit" value="提交" />
+            
+            <!-- <button>提交</button> -->
+        </form>
+        <br>
+        <form action="https://www.baidu.com/s" method="post" target="_blank" enctype="multipart/form-data">
+            <input type="text" name="wd" maxlength="5" /><br /><!--没有name事不能提交的-->
+            <input type="radio" value="woman" name="0" />woman<br />    
+            <input type="radio" value="man" name="0" />man<br /><!--单选框需要输入name属性设置为一组-->
+            <input type="checkbox" name="1">1 <br>
+            <input type="checkbox" name="1">2 <br>
+            <input type="file" ><br><!--如果是上传文件的表单，需要设置一个enctype="multipart/form-data"的属性,提交方式为post请求-->
+            <input type="hidden" value="admin"><!--不显示但最终提交的时候会传过去-->
+            <input type="submit" value="提交" />
+            <!-- <button>提交</button> --> <br>
+            <input type="button" value="普通按钮">
+            <input type="submit" value="提交按钮" disabled="disabled">
+            <input type="reset" value="重置按钮"><!--重置这个表单文本框内的内容-->
+            <input type="button" value="按钮" onclick="alert('你好')" /><!--点击按钮时触发的事件--> <br>
+            <input type="date"><br>
+        </form><br>
+        <label for="abcd">姓名</label><input type="text" name="uname" id="abcd" value="在这里输入姓名"><br>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <br>
+        <form action="">
+            <input type="text" name="" id="">
+            <button type="button">0</button>
+            <button type="submit">1</button>
+            <button type="reset">2</button>
+        </form><br>
+        <form action="https://www.baidu.com/s">
+            <select name="wd" multiple="multiple" size="10" disabled>
+                <option>shanghai</option>
+                <option>beijing</option>
+                <option>shenzhen</option>
+                <option>shanghai</option>
+                <option>beijing</option>
+                <option>shenzhen</option>
+            </select>
+            <button>submit</button>
+        </form>
+        <br>
+        <select name="wd">
+            <option>shanghai</option>
+            <option selected="selected">beijing</option>
+            <option value="sz">shenzhen</option>
+            <option disabled="disabled">shanghai</option>
+            <option>beijing</option>
+            <option>shenzhen</option>
+        </select>
+        <br>
+</body>
+</html>
+
+<!--id属性是所有标签都有，用来标识元素唯一性的-->
+<!--name属性是提交数据时的参数名-->
+<!--style是设置元素的行内样式，具体的样式-->
+<!--class设置元素的样式名，一套-->
+<!--disabled基本所有标签都能用-->
+
+<!-- 
+    HTML标签
+    单标签
+    无属性<标签名/>
+    有属性<标签名 属性名="属性值"/>
+    多标签
+    <标签名>无属性</标签名>
+    <标签名 属性名="属性值">有属性</标签名>
+
+    整体结构
+    <html></html>
+    <head></head>
+    <body></body>
+-->
+<!--
+        body标签(多个标签之间以空格分开)
+            bgcolor 背景颜色(颜色名/rgb/16进制)
+            用法 <body bgcolor="red">
+            text 颜色(颜色名/rgb/16进制)
+            用法 <body text="red">
+
+            标题标签 
+            <h1>标题</h1>~<h6>标题</h6>  1-6级标题
+            不建议写多个h1标签，可以被搜索引擎获取
+
+            水平线标签
+            <hr>  width宽度 50%或500px  align对齐方式 left/center（默认）/right size粗细
+
+            段落标签
+            <p>段落</p>
+            <p align="center">段落</p>对齐方式 left/center（默认）/right/justify两端对齐
+            
+            换行
+            <br>
+
+            列表
+            无序列表  属性：type图标（disc/circle/square）
+            <ul>
+                <li>列表项</li>
+                <li>列表项</li>
+            </ul>
+            有序列表 属性：type序号（1/a/A/i/I）
+            <ol>
+                <li>列表项</li>
+                <li>列表项</li>
+            </ol>
+
+            div标签
+            <div>div</div>可配合css使用，一般用于布局
+            属性 align对齐方式 left/center（默认）/right/justify两端对齐（标签内容的对齐方式）
+            层，块级元素，块级元素不能被换行，可以被搜索引擎获取，标签会自动换行
+            宽度取决于屏幕的宽度，高度取决于内容
+
+            span标签
+            <span>span</span>可配合css使用，一般用于样式
+            块，行内元素，标签不会被自动换行，不能被搜索引擎获取
+
+            格式化标签
+            font标签
+            <font>font</font>字体尺寸颜色 color/size/face
+            pre标签
+            <pre>pre</pre>定义预格式化的文本，保留文本中的空格和换行符
+            行内元素不会自动换行
+            粗体 <b>粗体</b><strong>粗体</strong>
+            斜体 <i>斜体</i><em>斜体</em>
+            下划线 <u>下划线</u>
+            删除线 <del>删除线</del>
+            下标 <sub>下标</sub>
+            上标 <sup>上标</sup>
+            换行 <br>
+
+            超链接a标签
+            <a href="http://www.baidu.com">百度</a>
+            用于从一个页面连接到另一个页面，行内元素不会自动换行
+            属性 target 新窗口打开/当前窗口打开 _self/_blank/_parent/_top
+            _blank新窗口打开 _parent父窗口打开 _top顶级窗口打开
+            href 地址
+            <a href="#">锚点</a> 连接到当前页面
+            锚点 1.<a name="author">锚点</a>利用name标签
+                   <a href="#author">锚点</a>回到上面name=author的锚点
+                 2.利用其它标签的id属性
+                    <p id="mdmd3">锚点3</p>
+                    <a href="#mdmd3">锚点3</a>回到上面id=mdmd3的锚点
+
+            img标签
+            <img src="图片地址" alt="图片描述" />
+            行类标签，不会自动换行
+            scr属性：图片地址
+            alt属性：图片显示错误时显示的文本
+            title属性：鼠标放上去悬停是显示的文字
+            width属性：图片宽度
+            height属性：图片高度
+            图片放大放小
+            <img src="图片地址" width="100px" height="100px" />
+            border属性：边框宽度
+            hspace属性：图片左右间距
+            vspace属性：图片上下间距
+            图片排列 默认居中为<img src="图片地址" align="absmiddle" />
+            <img src="图片地址" align="left" /> 在文字左边
+            <img src="图片地址" align="right" /> 在文字右边
+            <img src="图片地址" align="middle" /> 在文字中间
+            <img src="图片地址" align="absmiddle" /> 在文字中间，垂直居中
+            <img src="图片地址" align="baseline" /> 在文字基线
+            <img src="图片地址" align="top" /> 在文字上方
+            <img src="图片地址" align="bottom" /> 在文字下方
+            <img src="图片地址" align="texttop" /> 在文字上方
+            <img src="图片地址" align="textbottom" /> 在文字下方
+            <img src="图片地址" align="absbottom" /> 在文字下方，垂直居中
+
+            表格标签
+            <table>
+                <thead>
+                    <tr>
+                        <th>标题</th>
+                        <th>标题</th>
+                        <th>标题</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>td</td>
+                    <td>td</td>
+                </tr>
+                <tr>
+                    <td>td</td>
+                    <td>td</td>
+                </tr>
+            </table>
+            th为表头 tr为行 td为每个格子
+            table属性
+            border 定义表格边框宽度 width 定义表格宽度 height 定义表格高度
+            align有 left center right
+            style="border-collapse:collapse;    css样式，合并边框
+            tr属性
+            bgcolor 表格背景颜色
+            bordercolor 边框颜色
+            align 对齐方式 left center right
+            valign 垂直对齐方式 top middle bottom baseline
+            td属性
+            colspan 合并列数 rowspan 合并行数
+            bgcolor 表格背景颜色
+            bordercolor 边框颜色
+            align 对齐方式 left center right
+            valign 垂直对齐方式 top middle bottom baseline
+
+            表单form标签
+            <form>
+                <input type="text" name="username" />
+                <input type="password" name="password" />
+                <input type="submit" value="提交" />
+            </form>
+            form属性 action 地址 method 提交方式 enctype 提交类型 target 新窗口打开/当前窗口打开
+                    name 提交表单的名称
+                    表单需要结合表单元素一起使用
+                    get请求与post请求的区别 1、post请求需要服务器支持 
+                                            2、get请求时参数会跟在地址栏后面，
+                                                post请求不会（post请求会将数据存放在请求体中）
+                                            3、get请求相对post请求而言不那么安全
+                                            4、get请求传递的数据长度时有限的，而post基本没有限制（与服务器相关）
+                                            5、get请求比post请求快（2倍左右）
+                                            6、get请求有缓存（会将数据存放在浏览器中，即本地磁盘中，post无缓存）
+                表单中 input元素（可以不放在表单中）
+                        属性 type 元素类型   text文本框
+                                            password密码框
+                                            value元素的值
+                                            name元素的名称
+                                            readonly只读 不让你填的
+                                            maxlenth 最大长度
+                                            radio 单选框
+                                            checkbox 复选框
+                                            file 文件域
+                                            hidden 隐藏域
+                                            date 日期框
+                                            disabled 禁用标签
+                                            password checkbox  submit reset
+                                            按钮标签type="button"
+                                            button
+                                            submit
+                                            reset
+                
+                表单中 textarea 元素 定义可输入多行文本的控件
+                                            cols="30" 可见宽度
+                                            rows="10" 可见行数
+
+                        label 元素 定义标签
+                                            当for属性与元素的id一致时点击label标签会自动为元素聚焦
+
+                        button元素 按钮标签
+                                            type
+                                            button
+                                            submit(默认值)
+                                            reset
+                        
+                        select（结合option） 下拉框
+                                            select 下拉框标签
+                                                multiple 多选
+                                                size  可见选项数
+                                                disabled 禁用
+                                            option 下拉框选项标签
+                                                selected 默认选中
+                                                disabled 禁用某一选项
+                                                value 提交给服务器的选项值，如果设置value属性值则提交的是value的值，如果没有设置value属性值则提交的是option的文本
+                                            
+            
+            常用字符实体 
+                < &lt;
+                > &gt;
+                空格 &nbsp;
+                © &copy;
+
+
+            标签的分类
+                块级元素
+                    元素都从新的一行开始，可以设置宽高，不设置的情况下默认占父级容器100%
+                行内标签
+                    和其他元素都在一行上，不能设置宽高，元素宽度是它包含的文字或图片的宽度，不可改变
+                行内块状标签
+                    和其他元素都在一行上，高度宽度行高以及顶和底边距都是可以设置的
+            
+
+
+
+
+
+
+
+
+
+
+                        属性 name 元素名称
+                        属性 cols 列数
+                        属性 rows 行数
+                        属性 disabled 禁用标签
+                        属性 readonly 只读
+                        属性 maxlength 最大长度
+                        属性 wrap 换行方式
+                        属性 onfocus 获得焦点
+                        属性 onblur 失去焦点
+                        属性 onchange 值改变
+                        属性 onselect 选中
+                        属性 onkeydown 键盘按下
+                        属性 onkeyup 键盘抬起
+                        属性 onkeypress 键盘按下并抬起
+                        属性 onclick 点击
+                        属性 ondblclick 双击
+                        属性 onmousedown 鼠标按下
+                        属性 onmouseup 鼠标抬起
+                        属性 onmousemove 鼠标移动
+                        属性 onmouseover 鼠标移入
+                        属性 onmouseout 鼠标移出
+                        属性 onmouseenter 鼠标移入
+                        属性 onmouseleave 鼠标移出
+                        属性 onscroll 滚动
+                        属性 onresize 调整大小
+                        属性 ondragstart 拖拽开始
+                        属性 ondrag 移动
+                        属性 ondragend 拖拽结束
+                        属性 ondragover 拖拽进入
+                        属性 ondragleave 拖拽离开
+                        属性 ondrop 拖拽放下
+                        属性 onpaste 粘贴
+                        属性 oncopy 复制
+                        属性 oncut 剪切
+                        属性 onselectstart 选择开始
+                        属性 onselect 选择
+                        属性 onselectend 选择结束
+                        属性 onsubmit 提交
+                        属性 onreset 重置
+                        属性 onsearch 搜索
+                        属性 oninput 输入
+                        属性 oninvalid 输入无效
+
+
+-->
+<!--
+    doctype
+    <!DOCTYPE html>需要写在第一行
+-->

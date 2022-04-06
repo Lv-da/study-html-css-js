@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: lightskyblue;
+            animation: mymove 5s infinite;
+            animation: mymove2 5s infinite;
+        }
+        @keyframes mymove {
+            from{background: lightskyblue;}
+            to{background: #0fc;} 
+        }
+        @keyframes mymove2 {
+            from{background: #0fc;}
+            to{background: lightskyblue;}
+        }
+        button {
+            background-color: #ee9e9e;
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+        button {
+            background-color: white; 
+            color: black; 
+            border: 2px solid #4CAF50;
+        }
+
+        button:hover {
+            background-color: #4CAF50;
+            color: white;   
+        }
+        input {
+            background-color: #4CAF50; Green
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+        input {
+            background-color: white; 
+            color: black; 
+            border: 2px solid #4CAF50;
+        }
+
+        input:hover {
+            background-color: #4CAF50;
+            color: white;   
+        }
+
+        td{border: 10px double darkblue;}
+    </style>
+</head>
+<body>
+    <table style="border: 1px solid darkblue;" align="center" >
+        <tr>
+            <td><button type="button">按钮</button></td>
+            <td><button type="button">按钮</button></td>
+        </tr>
+        <tr>
+            <td><button type="button">按钮</button></td>
+            <td><button type="button">按钮</button></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="按钮"></td>
+            <td><input type="text"></td>
+        </tr>
+    </table>
+</body>
+</html>

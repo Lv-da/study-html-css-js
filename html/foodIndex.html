@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实验2</title>
+    <style>
+        body{
+            background: lightyellow;
+        }
+        div{
+            margin: 10px;
+        }
+        #Menu{
+            list-style: none;
+            float: left;
+            margin-top: px;
+            background: red;
+            border-radius: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+            width:95%;    
+        }
+        #Menu li{
+            display: inline;
+            background-color: red; 
+            border: 2px solid red;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 0px 0px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+        #Menu li:hover{
+            background-color: orange;
+            color: black;
+        }
+        #Left{
+            float: left;
+            list-style: none;
+            background: white;
+        }
+        #Left li{
+            /* margin-left: 30px; */
+            background: white;
+            list-style: disc;
+            margin-top: 0px;
+            padding: 8px 32px;
+            transition-duration: 0.4s;
+            border-bottom: 1px dashed black;
+            cursor: pointer;
+        }
+        #Left li:hover{
+            background-color: red;
+            color: white;
+        }
+        #Table{
+            width: 100%;
+            height: 100%;
+        }
+        #Table tr{
+            height:250px;
+        }
+        #Table td{
+            border: 1px solid black;
+        }
+        #restName{
+            color:gray;
+            /* background-color: rgb(155, 155, 155); */
+            width: 75%;
+            cursor: pointer;
+            transition-duration: 0.4s;
+        }
+        #restName:hover{
+            background-color: rgb(255, 255, 210);
+            color: black;
+        }
+        .bottom{
+            margin:0px;
+        }
+    </style>
+</head>
+<body>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <td bgcolor="#f7f7f7">
+                <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+                    <tr>
+                        <td>
+                        <span style="color:rgb(255, 255, 0);">★</span>收藏|Hi,欢迎来订购
+                            <a href="#">[请登录]</a>
+                            <a href="#">[免费注册]</a>
+                        </td>
+                        <td align="right">
+                            <select name="" id="">
+                                <option value="" selected>客户服务</option>
+                            </select>
+                            <select name="" id="">
+                                <option value="" selected>网站导航</option>
+                            </select>
+                            <a href="#" style="color:gray">我的购物车<span style="color:blue">0</span>件</a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <table width="90%" style="margin-left:5%">
+        <tr>
+            <td><img src="" alt="logo"></td>
+            <td align="right"><img src="" alt="banner"></td>
+        </tr>
+    </table>
+    <div>
+        <div>
+            <ul id="Menu">
+                <li>首页</li>
+                <li>美食</li>
+                <li>今日新单</li>
+                <li>团购</li>
+                <li>身边外卖</li>
+                <li>休闲娱乐</li>
+                <li>生活服务</li>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <div>
+            <div>
+                <ul id="Left">
+                    <li style="margin:0; list-style: none; background: red; color: white;border-radius:0 0 20px 0;">按地区</li>
+                    <li>火锅</li>
+                    <li>日韩料理</li>
+                    <li>西餐</li>
+                    <li>小吃快餐</li>
+                    <li>自助餐</li>
+                    <li style="margin:0; list-style: none; background: red; color: white;border-radius:0 0 20px 0;">按地区</li>
+                    <li>市北区</li>
+                    <li>市南区</li>
+                    <li>李沧区</li>
+                    <li>崂山区</li>
+                    <li>黄岛区</li>
+                    <li style="margin:0; list-style: none; background: red; color: white;border-radius:0 0 20px 0;">按人数</li>
+                    <li>单人餐</li>
+                    <li>双人餐</li>
+                    <li>3-4人</li>
+                    <li>5-6人</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <div height="40%" style="margin-left:200px">
+                <span style="font-size: 75px;padding: 32px 16px;">我是图片</span>
+                <table align="right" style="padding: 16px 32px;width: 50%;">
+                    <tr>
+                        <td>
+                            <p><img src="" alt="图1" /></p>
+                            <span style="float: left;margin-left: 10%;font-size: small;"><strong>爵士牛排馆</strong></span>
+                            <span style="float: right;margin-right: 30%;color: gray;font-size: small;">￥45</span>
+                        </td>
+                        <td>
+                            <p><img src="" alt="图2" /></p>
+                            <span style="float: left;margin-left: 10%;font-size: small;"><strong>九宫格火锅</strong></span>
+                            <span style="float: right;margin-right: 30%;color: gray;font-size: small;">￥78</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><img src="" alt="图3" /></p>
+                            <span style="float: left;margin-left: 10%;font-size: small;"><strong>雀食云南菜</strong></span>
+                            <span style="float: right;margin-right: 30%;color: gray;font-size: small;">￥85</span>
+                        </td>
+                        <td>
+                            <p><img src="" alt="图4" /></p>
+                            <span style="float: left;margin-left: 10%;font-size: small;"><strong>阿尔卑斯牛排自助</strong></span>
+                            <span style="float: right;margin-right: 30%;color: gray;font-size: small;">￥66</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div style="margin-left: 200px;margin-top:175px;background: rgba(255, 255, 168,0.5);border-radius: 10px;">
+                <p style="font-size: larger;"><strong>| 今日新单</strong></p>
+                <table id="Table">
+                    <tr>
+                        <td>
+                            <p><img src="" alt="图1" /></p>
+                            <p id="restName" >大鱼铁板烧(心海广场店)</p>
+                            <span style="float: left;margin-left: 10%;font-size: small;"><strong>￥180</strong>起</span>
+                            <span style="float: right;margin-right: 30%;color: gray;font-size: small;">人均60元</span>
+                        </td>
+                        <td>
+                            <p><img src="" alt="图2" /></p>
+                            <p id="restName" >XX牛排自助餐厅</p>
+                            <span style="float: left;margin-left: 10%;font-size: small;"><strong>￥45</strong>起</span>
+                            <span style="float: right;margin-right: 30%;color: gray;font-size: small;">人均66元</span>
+                        </td>
+                        <td>
+                            <p><img src="" alt="图3" /></p>
+                            <p id="restName" >全食客自助餐厅</p>
+                            <span style="float: left;margin-left: 10%;font-size: small;"><strong>￥55</strong>起</span>
+                            <span style="float: right;margin-right: 30%;color: gray;font-size: small;">人均57元</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <P><img src="" alt="图4" /></P>
+                            <p id="restName" >川香麻辣火锅</p>
+                            <span style="float: left;margin-left: 10%;font-size: small;"><strong>￥38</strong>起</span>
+                            <span style="float: right;margin-right: 30%;color: gray;font-size: small;">人均34元</span>
+                        </td>
+                        <td>
+                            <p><img src="" alt="图5" /></p>
+                            <p id="restName" >好圣道自助烤肉涮锅</p>
+                            <span style="float: left;margin-left: 10%;font-size: small;"><strong>￥39.9</strong>起</span>
+                            <span style="float: right;margin-right: 30%;color: gray;font-size: small;">人均45元</span>
+                        </td>
+                        <td>
+                            <p><img src="" alt="图6" /></p>
+                            <p id="restName" >海都大酒店</p>
+                            <span style="float: left;margin-left: 10%;font-size: small;"><strong>￥89</strong>起</span>
+                            <span style="float: right;margin-right: 30%;color: gray;font-size: small;">人均80元</span>
+                        </td>  
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <div style="margin-right:80%;margin-top: 0px;padding: 8px 32px;height:200px;">
+                    <p style="font-size: larger;"><strong>| 今日新单</strong></p>
+                    <table id="Table">
+                        <tr>
+                            <p><img src="" alt="图1" /></p>
+                            <span style="float: left;margin-left: 10%;font-size: small;"><strong>阳平肥肠</strong></span>
+                            <span style="float: right;margin-right: 30%;color: gray;font-size: small;">￥79起</span>
+                        </tr>  
+                        <br>
+                        <tr>
+                            <p><img src="" alt="图2" /></p>
+                            <span style="float: left;margin-left: 10%;font-size: small;"><strong>XXX火锅</strong></span>
+                            <span style="float: right;margin-right: 30%;color: gray;font-size: small;">￥138起</span>
+                        </tr>  
+                    </table>
+                </div>
+            </div>
+        </div>
+        <table>
+            <p style="font-size: larger;"><strong>| 精品推荐</strong></p>
+            <tr style="border: 1px solid black;">
+                <td style="width:200px;">
+                    <p><img src="" alt="图1" /></p>
+                    <span style="float: left;margin-left: 10%;font-size: small;"><strong>XXX</strong></span>
+                    <span style="float: right;margin-right: 30%;color: gray;font-size: small;">￥79起</span>
+                </td>
+                <td style="width:200px;">
+                    <p><img src="" alt="图1" /></p>
+                    <span style="float: left;margin-left: 10%;font-size: small;"><strong>XXX</strong></span>
+                    <span style="float: right;margin-right: 30%;color: gray;font-size: small;">￥79起</span>
+                </td>
+                <td style="width:200px;">
+                    <p><img src="" alt="图1" /></p>
+                    <span style="float: left;margin-left: 10%;font-size: small;"><strong>XXX</strong></span>
+                    <span style="float: right;margin-right: 30%;color: gray;font-size: small;">￥79起</span>
+                </td>
+                <td style="width:200px;">
+                    <p><img src="" alt="图1" /></p>
+                    <span style="float: left;margin-left: 10%;font-size: small;"><strong>XXX</strong></span>
+                    <span style="float: right;margin-right: 30%;color: gray;font-size: small;">￥79起</span>
+                </td>
+                <td style="width:200px;">
+                    <p><img src="" alt="图1" /></p>
+                    <span style="float: left;margin-left: 10%;font-size: small;"><strong>XXX</strong></span>
+                    <span style="float: right;margin-right: 30%;color: gray;font-size: small;">￥79起</span>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div align="bottom" class="bottom">
+        <p align="center">Copyright 2015-2020 Q-Walking Fashion E&S 漫步时尚广场 (QST教育) 版权所有</p>
+    </div>
+    
+</body>
+</html>

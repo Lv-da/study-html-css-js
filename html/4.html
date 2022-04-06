@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function change(){
+            var num=document.getElementById("myNum");
+            var loc=document.getElementById("show");
+            loc.value=num.value;
+        }
+    </script>
+</head>
+<body>
+    <form action="" method="get">
+        <table>
+            <tr> 
+                <td>请输入您的邮箱地址:</td>
+                <td><input type="text" placeholder="输入邮箱地址"></td>
+            </tr> 
+            <tr>
+                <td>请输入一个网址:</td>
+                <td><input type="text" placeholder="输入网址"></td>
+            </tr>
+            <tr>
+                <td>请输入数字</td>
+                <td><input type="text" value="4"></td>
+            </tr>
+            <tr>
+                <td>数字滑动条</td>
+                <td><input type="range" name="myNum" id="myNum" oninput="change()">
+                <input type="text" id="show"></td>
+            </tr>
+            <tr>
+                <td>请输入日期:</td>
+                <td><input type="date"></td>
+            </tr>
+            <tr>
+                <td>请选择颜色:</td>
+                <td><input type="color"></td>
+            </tr>
+            <tr>
+                <td>请选择招式</td>
+                <td><select name="" id="">
+                    <option value="" selected></option>
+                    <option value="">亢龙有悔</option>
+                    <option value="">飞龙在天</option>
+                    <option value="">神龙见尾</option>
+                    <option value="">神龙摆尾</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td><button>提交</button></td>
+            </tr>
+        </table>
+        
+    </form>
+</body>
+</html>

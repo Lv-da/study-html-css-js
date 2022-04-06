@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>interview</title>
+    <style>
+        body{
+            background: lightyellow;
+        }
+        div{
+            margin: 10px;
+        }
+        #Menu{
+            list-style: none;
+            float: left;
+            margin-top: px;
+            background: red;
+            border-radius: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+            width:95%;    
+        }
+        #Menu li{
+            display: inline;
+            background-color: red; 
+            border: 2px solid red;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 0px 0px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+        #Menu li:hover{
+            background-color: orange;
+            color: black;
+        }
+
+        .MeNu{
+            background: red;
+            width: 100%;
+            border-radius: 12px;
+        }
+        .MeNu td{
+            background-color: red; 
+            border: 2px solid red;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 0px 0px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+            border-radius: 12px;
+        }
+        .MeNu td:hover{
+            background-color: orange;
+            color: black;
+        }
+
+        /* 设置下拉按钮的样式 */
+        .dropbtn {
+            background-color: red;
+            color: white;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            /* width: 160px; */
+            transition-duration: 0.4s;
+        }
+
+        /* 容器 <div> - 需要放置下拉内容 */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* 下拉内容（默认隐藏） */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            /* min-width: 160px; */
+            min-width: auto;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        /* 下拉链接 */
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* 悬停时更改下拉链接的颜色 */
+        .dropdown-content a:hover {
+            background-color: gold;
+            border-radius: 12px;
+        }
+
+        /* 悬停时显示下拉菜单 */
+        .dropdown:hover .dropdown-content {
+            display: block;
+            background: orange;
+            color: black;
+            border-radius: 12px;
+        }
+
+        /* 显示下拉内容时，更改下拉按钮的背景颜色 */
+        .dropdown:hover .dropbtn {
+            background-color: orange;
+            color: black;
+        }
+        input{
+            font-size: 16px;
+        }
+        .Button{
+            background-color: red; 
+            border: 1px solid red;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 0px 0px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+            border-radius: 12px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .Button:hover{
+            background-color: orange;
+            color: black;
+            border: 1px solid orange;
+            box-shadow: 0px 4px 12px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div>
+        <ul id="Menu">
+            <li>首页</li>
+            <li><div class="dropdown">
+                <button class="dropbtn">美食</button>
+                <div class="dropdown-content">
+                    <a href="">按地区</a>
+                    <a href="">按地区</a>
+                    <a href="">按人数</a>
+                </div>
+            </div></li>
+            <li>今日新单</li>
+            <li>团购</li>
+            <li>身边外卖</li>
+            <li>休闲娱乐</li>
+            <li>生活服务</li>
+        </ul>
+    </div> -->
+    <div>
+        <table class="MeNu">
+            <tr>
+                <td>首页</td>
+                <td class="dropdown">
+                    <button class="dropbtn">美食</button>
+                        <div class="dropdown-content">
+                            <a href="">按地区</a>
+                            <a href="">按地区</a>
+                            <a href="">按人数</a>
+                        </div>
+                </td>
+                <td>今日新单</td>
+                <td>团购</td>
+                <td>身边外卖</td>
+                <td>休闲娱乐</td>
+                <td>生活服务</td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <table class="MeNu">
+            <tr class="dropdown">
+                <td>首页</td>
+                <td class="dropbtn">
+                    美食
+                    <div class="dropdown-content">
+                        <a href="">按地区</a>
+                        <a href="">按地区</a>
+                        <a href="">按人数</a>
+                    </div>
+                </td>
+                <td>今日新单</td>
+                <td>团购</td>
+                <td>身边外卖</td>
+                <td>休闲娱乐</td>
+                <td>生活服务</td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <div>
+        <form action="https://owo.lvda.life">
+            <input type="text" name="?scene" placeholder="随便输点">
+            <button class="Button">我是按钮</button>
+        </form>
+    </div>
+</body>
+</html>
