@@ -1,0 +1,273 @@
+<style type="text/css">
+	*{
+		margin:0;
+		padding:0;
+		/* overflow: hidden; */
+	}
+	/* 如何更改 input 拾色器的外观*/  /* 火狐 不兼容*/
+	/* ::-webkit-color-swatch-wrapper 设置拾色器的外层包括的边框带样式
+	 * input[type="color"]::-webkit-color-swatch-wrapper {padding: 0;} 消除外边框带*/
+	.input_color[type='color']::-webkit-color-swatch-wrapper{padding: 0;}
+	/* ::-webkit-color-swatch  设置内层的边框(放置从拾色器选取的颜色)样式，颜色改变的地方
+	 * input[type='color']::-webkit-color-swatch {border:0;} 去掉剩下的黑色边框 */
+	.input_color[type='color']::-webkit-color-swatch{border: 0;border-radius: 10px;}
+	
+	body{
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-image: linear-gradient(to right bottom, #00ff95, rgb(0, 255, 242));
+	}
+	h1{
+		text-align: center;
+		color: #ecf0f1;
+		font-size: 50px;
+		letter-spacing: 5px;
+		font-weight: 100;
+		/* 文字阴影 */
+		text-shadow: 5px 5px 5px rgba(33,45,58,0.3);
+		z-index: 1;
+	}
+	.contianer{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;/* 垂直方向 */
+
+		width: 600px;
+		height: 600px;
+		background-color: #568fd1;
+
+		border-radius: 20px;
+		box-shadow: 15px 15px 10px rgba(33,45,58,0.3);/* 阴影*/
+
+		/* overflow: hidden; */
+		position: relative;
+	}
+	.contianer .inside{
+		width: 400px;
+		height: 200px;
+		display: flex;
+		justify-content: space-around;
+		flex-direction: column;
+		z-index: 1;/* 层级 */
+
+		color: white;
+		/* font-size: 50px; */
+		/* letter-spacing: 5px; */
+		font-weight: 100;
+		/* 文字阴影 */
+		text-shadow: 5px 5px 5px rgba(33,45,58,0.3);
+		z-index: 1;
+	}
+	footer{
+		/*位置在页面底部*/
+		position: absolute;
+		bottom: 0;
+		/* width: 30%; */
+		width: 300px;
+		height: 50px;
+		text-align: center;
+		font-size: small;
+	}
+	#context{
+		/* width: 250px; */
+		margin-top: 10%;
+		width: 400px;
+		height: 40px;
+		outline: none;
+		border: none;
+		border-bottom: 1px solid #fff;
+		background: none;
+		color:#fff;
+		font-size: 15px;
+	}
+	#context::placeholder{
+    	font-size: 15px;
+		color: white;
+		/* font-size: 50px; */
+		letter-spacing: 5px;
+		font-weight: 100;
+		/* 文字阴影 */
+		text-shadow: 5px 5px 5px rgba(33,45,58,0.3);
+		z-index: 1;
+	}
+	.inside button{
+		width: 250px;
+		height: 40px;
+		outline: none;
+		border:1px solid #fff;
+		border-radius: 20px;
+		letter-spacing: 5px;
+		color:#fff;
+		background: none;
+		cursor: pointer;
+		margin-top: 10px;
+		align-self: center;
+		/* align-items: center; */
+		transition: 0.4s;
+	}
+	.inside button:hover{
+		background-color: #fff;
+		color: #568fd1;
+	}
+	#setColorDiv,#finalStringDiv{
+		color: black;
+		background-color: white;
+		border-radius: 5px;
+	}
+	
+</style>
+<body>
+	<div class="contianer">
+		<div class="inside"> 
+			<h1>驴哒|Lv_da</h1>
+			<!--输入文本：--><input id="context" type="text" placeholder="随便输点啥"> &emsp;<button onclick="resetContext()">重置</button> &emsp;<button onclick="nextStep_Context()">下一步</button></br></br>
+			
+			点击文字设置颜色： </br>
+			<div id="setColorDiv" style="border:1px solid white;width:400px;"></div>
+			
+			<button onclick="preview()">预览效果</button> &emsp; <button onclick="resetColorDiv()">重置颜色</button> &emsp; <button onclick="nextStep_setColor()">下一步</button> </br></br>
+			<div id="finalStringDiv" style="border:1px solid white;width:400px;"></div>
+			
+			
+			<input id="colorCompent" type="color" onchange="currentClickCharNode.setAttribute('color',this.value);" />
+		
+
+			<script>
+				/* ======== 全局变量 ======== */
+				//“文本框字符串”节点
+				var contextNode = document.getElementById("context");
+				//“设置颜色”节点
+				var setColorDivNode = document.getElementById("setColorDiv");
+				//颜色控件
+				var colorCompent = document.getElementById("colorCompent");
+				//当前点击的字符
+				var currentClickCharNode;
+				
+				
+				/* ======== 方法 ======== */
+				//输入文本的下一步：根据文本框的字符串内容，设置每个字符可点击并设置颜色
+				function nextStep_Context(){
+					//先去除旧元素
+					var oldFontNodes = document.getElementsByClassName("colorfulStr");
+					for(var i=oldFontNodes.length-1;i>=0;i--){
+						setColorDiv.removeChild(oldFontNodes[i]);
+					}
+					var contextStr = contextNode.value;
+					//从文本框中获取字符串并创建元素,最后添加到预览框中
+					var strLenth = contextStr.length;
+					for(var i=0;i<strLenth;i++){
+						var fontNode = document.createElement('font');
+						//fontNode.setAttribute("color","#12457"+i);
+						fontNode.setAttribute("onclick","currentClickCharNode=this;colorCompent.click()");
+						fontNode.className="colorfulStr";
+						fontNode.innerText = contextStr[i];
+						setColorDivNode.appendChild(fontNode);
+					}
+				}
+				
+				
+				//预览渐变字
+				function preview(){
+					var fontNodes = document.getElementsByClassName("colorfulStr");
+					for(var i=fontNodes.length-1;i>=0;i--){
+						console.log(fontNodes[i]);
+					}
+					console.log(fontNodes[0].getAttribute("color"));
+					console.log(fontNodes[1].getAttribute("color"));
+				
+					//字符总个数
+					var nodesCount = fontNodes.length;
+					//有颜色的字符的位置
+					var colorCount = 0;
+					var positions = new Array();
+					var colors = new Array();
+					for(var i=0;i<nodesCount;i++){
+						if(fontNodes[i].getAttribute("color")!=null){
+							positions[colorCount] = i;
+							colors[colorCount] = fontNodes[i].getAttribute("color");
+							colorCount++;
+						}
+					}
+					if(colorCount==0){
+						return null;
+					}
+					//计算每个字符的颜色
+					for(var i=0;i<colorCount-1;i++){
+						var leftColor = toRGB(colors[i]);
+						var rightColor = toRGB(colors[i+1]);
+						for(var j=positions[i]+1;j<positions[i+1];j++) {
+							var r = leftColor[0]+(rightColor[0]-leftColor[0])*(j-positions[i])/(positions[i+1]-positions[i]);
+							var g = leftColor[1]+(rightColor[1]-leftColor[1])*(j-positions[i])/(positions[i+1]-positions[i]);
+							var b = leftColor[2]+(rightColor[2]-leftColor[2])*(j-positions[i])/(positions[i+1]-positions[i]);
+							var rgbHex = toHex(r,g,b);
+							fontNodes[j].setAttribute("color",rgbHex);
+						}
+					}
+					//两端设置不渐变颜色
+					for(var i=0;i<positions[0];i++) {
+						fontNodes[i].setAttribute("color",colors[0]);
+					}
+					for(var i=positions[colorCount-1];i<nodesCount;i++) {
+						fontNodes[i].setAttribute("color",colors[colorCount-1]);
+					}
+				}
+				
+				
+				//“设置颜色”的下一步：将设置好的颜色作为参数，生成渐变字符串
+				function nextStep_setColor(){
+					var fontNodes = document.getElementsByClassName("colorfulStr");
+					var nodesCount = fontNodes.length;
+					var finalString = "";
+					for(var i=0;i<nodesCount;i++) {
+						var rgbHex = fontNodes[i].getAttribute("color");
+						//console.log(rgbHex);
+						var charStr = fontNodes[i].innerText;
+						//console.log(charStr);
+						finalString+="&"+rgbHex+charStr;
+					}
+					document.getElementById("finalStringDiv").innerText=finalString;
+				}
+				
+				//重置文本框
+				function resetContext(){
+					//清除文本框的文字
+					document.getElementById("context").value = "";
+				}
+				//重置颜色
+				function resetColorDiv() {
+					var oldFontNodes = document.getElementsByClassName("colorfulStr");
+					for(var i=oldFontNodes.length-1;i>=0;i--){
+						oldFontNodes[i].removeAttribute("color");
+					}
+				}
+				
+				
+				//十六进制转RGB
+				function toRGB(hex){
+					hex = hex.replace("#","0x");
+					var r = hex >> 16;
+					var g = hex >> 8 & 0xff;
+					var b = hex & 0xff;
+					return new Array(r,g,b);
+					//return "rgb("+r+","+g+","+b+")";
+				}
+				//RGB转十六进制
+				function toHex(r,g,b){
+					var hex = ( r << 16 ) | ( g << 8 ) | b;
+					//console.log(hex.toString(16));
+					return "#"+hex.toString(16);
+				}
+			</script>
+			
+			<!-- <button onclick="toHex(12,88,168)">测试十六进制0C58A8</button> -->
+		</div>
+	</div>
+	<footer>
+		<a href="https://github.com/Lv-da/anEasyGradientColorGenerator" target="_blank">Github/使用说明</a>
+	</footer>
+</body>
+	
+	

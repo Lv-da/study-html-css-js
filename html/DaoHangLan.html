@@ -1,58 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        #Menu{
-            list-style: none;
-            float: left;
-            margin: 0;
-            background: red;
-            /* border-radius: 10px; */
-            width:95%;    
-            overflow: hidden;
-            /* padding: 0; */
-            padding-top: 0;
-            padding-bottom: 0;
-        }
-        #Menu li{
-            display: inline;
-            background-color: red; 
-            border: 2px solid red;
-            color: white;
-            padding: 16px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 0px 0px;
-            transition-duration: 0.4s;
-            cursor: pointer;
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        background-color: lightgoldenrodyellow;
+    }
+    #Menu{
+        list-style: none;
+        float: left;
+        /* margin-top: 0px; */
+        background: red;
+        /* border-radius: 10px; */
+        /* margin-left: 10px;
+        margin-right: 10px; */
+        width: 100%;
+    }
+    #Menu li{
+        display: inline;
+        background-color: red; 
+        border: 2px solid red;
+        color: white;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 0px 0px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+    #Menu li:hover{
+        background-color: orange;
+        color: black;
+    }
+</style>
 
-            font-weight: 700;
-        }
-        #Menu li a{
-            color: white;
-            display: block;
-            text-decoration: none;
-
-        }
-        #Menu li:hover{
-            background-color: orange;
-            color: black;
-        }
-        #Menu li a:hover{
-            color: black;
-        }
-    </style>
-</head>
 <body>
+    <div>
         <div>
             <ul id="Menu">
-                <li>首页</li>
+                <a href="https://owo.lvda.life" target="_blank"><li>首页</li></a>
                 <li>最新上架</li>
                 <li>品牌活动</li>
                 <li>原厂直购</li>
@@ -61,5 +49,5 @@
                 <li>促销打折</li>
             </ul>
         </div>
+    </div>
 </body>
-</html>

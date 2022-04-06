@@ -1,0 +1,71 @@
+<style>
+    body{
+        background-color: lightgoldenrodyellow;
+    }
+    #Left{
+        float: left;
+        list-style: none;
+        background: white;
+        display: inline;
+        width: 20%;
+        /* margin: 0; */
+        margin-left: 0;
+        padding: 0;
+        list-style-position: inside;
+    }
+    #Left li{
+        /* margin-left: 30px; */
+        /* text-align: center; */
+        list-style-type: disc;
+        list-style-position: inside;
+        /* list-style: none; */
+        background: white;
+        /* list-style: disc; */
+        margin-top: 0px;
+        padding: 8px 32px;
+        transition-duration: 0.4s;
+        border-bottom: 1px dashed black;
+        cursor: pointer;
+    }
+    #Left .title{
+        text-align:left; 
+        margin:0; 
+        list-style: none; 
+        background: red; 
+        color: white;
+        border-radius:0 0 20px 0;
+    }
+    #Left li:hover{
+        background-color: rgba(255, 0, 0, 0.485);
+        color: white;
+    }
+    #Left li .arrow{
+        display: inline;
+        float: right;
+        color: darkgray;
+        margin-top: 0px;
+    }
+    /* #Left li .arrow:hover{
+        background-color: rgba(255, 0, 0, 0.485);
+        color: white;
+    } */
+</style>
+
+<body>
+    <div>
+        <ul id="Left">
+            <li class="title">按地区</li>
+            <li>火锅<p class="arrow">></p></li>
+            <li>日韩料理<p class="arrow">></p></li>
+            <li>西餐<p class="arrow">></p></li>
+            <li>小吃快餐<p class="arrow">></p></li>
+            <li>自助餐<p class="arrow">></p></li>
+            <li class="title">按地区</li>
+            <li>市北区<p class="arrow">></p></li>
+            <li>市南区<p class="arrow">></p></li>
+            <li>李沧区<p class="arrow">></p></li>
+            <li>崂山区<p class="arrow">></p></li>
+            <li>黄岛区<p class="arrow">></p></li>
+        </ul>
+    </div>
+</body>
