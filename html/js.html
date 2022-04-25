@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" onclick="alert('hello')">hello</button>
+    <!-- 行内js -->
+    <button type="button" onclick="str()">test</button>
+</body>
+
+<!-- 内部js -->
+<script>
+    //入门
+    //alert('1212');
+    var str1 = 'test';
+    function str(){
+        alert(str1);
+    }
+    //window.onload=str();
+    console.log(str1);
+
+    //变量
+    // JS是一种弱类型语言，声明变量时不需要指定数据类型，直接使用var
+    var str2 = 'test2';
+    console.log(str2);
+    var str3;//声明而不赋值，默认为undefined
+    //console.log(str3);
+    str3='test3';
+    //可以同时声明多个变量
+    var str4,str5,str6=10;//4,5为undefined, 6为10
+    //若使用var重新声明变量，是无效的
+    //var str4;
+    //var重新声明并赋值一个已经存在的变量，会覆盖之前的变量
+    str4='test4';
+    console.log(str4);
+    var str4='test4x';
+    console.log(str4);
+
+    //var赋值的变量类型可以为 字符串、数字、布尔值、对象、函数
+    //变量提升：变量声明提升到代码的顶部，变量赋值提升到变量声明的位置
+    //因为js编码是从上往下执行的，所以变量声明提升到代码的顶部，变量赋值提升到变量声明的位置
+    //只有用var声明的变量才会被提升，不会被提升到函数的顶部
+
+    //数据类型
+    //五种简单数据类型 undefined null 布尔 数值 字符串 
+    //一种复杂数据类型 object{
+    //  各种值组成的集合
+    //  对象（object）{neme:"value",age:"value"}
+    //  数组（array）[1,2,3]
+    //  函数（function）function test(){}
+    //}
+    /*
+    undefined 
+    表示值不存在
+    声明变量未赋值时
+    调用函数（方法）时，函数有形参，但未提供实参，则形参的值为undefined
+    函数（方法）没有返回值，默认返回undefined
+
+    null 
+    表示空值
+    使用typeof操作符测试null返回object字符串
+    undefined派生自null，所以等值比较返回值时true。未初始化的变量和赋值为null的变量等值
+
+    布尔 
+    true false
+
+    数值 
+    整型和浮点型
+    js中所有数字都是以64位浮点类型存储的，所以1==1.0，1+1.0的值为2
+    浮点类型最高精度是17位，浮点类型运算时可能不准确，不建议使用浮点型做判断
+    在存储数值是会自动将整型的浮点数值（1.0）转换成整型（1）
+
+    字符串 
+    使用''或""包裹字符串
+
+    对象
+    {}声明
+    */
+
+    //类型转换
+    /*
+    自动类型转换
+    
+    函数转换
+    */
+    console.log(parseInt('12.34'));//12
+    /*
+    parseInt() 将字符串转换为整型 判断从位置0开始的字符串是否是数字，是则返回数字，否则返回NaN，
+    直到遇到非数字字符为止
+    parseFloat() 将字符串转换为浮点型 相比parseInt()更精确，多读了一个小数点
+
+    显示转换
+    toString() 将数字转换为字符串
+    toFixed() 将数字转换为字符串，保留小数点，会四舍五入
+    */
+    var date=10;
+    console.log(date);
+    console.log(date.toString());//10
+    console.log(date.toFixed(2));//10.00
+    /*
+    强制转换
+    转换的是整体
+    Number() 将字符串转换为数字
+    String() 将数字转换为字符串
+    Boolean() 将数字转换为布尔值
+    */
+    console.log(Number('12.34'));//12.34
+    console.log(String(12.34));//12.34
+    console.log(Boolean(12.34));//true
+    console.log(Boolean(0));//false
+    console.log(Boolean(''));//false
+    var flag=true;
+    console.log(flag+'');//true
+
+    //运算符
+    //+-*/% ++ --
+    //+= -= *= /= %=
+    //比较运算符
+    //==等于 !=不等于 ===全等 !==不全等
+    //==只比较值是否相等
+    //===比较值和类型是否相等
+    var a=1;
+    var b='1';
+    console.log(a==b);//true
+    console.log(a===b);//false
+
+    //逻辑运算符
+    //&&或||或!
+    //三目运算符 ?: 同c/c++
+
+    //选择
+    //if else
+    //else if
+    //switch case
+    //switch(expression){
+    //    case value1:
+    //        code block
+    //        break;
+    //    default:
+    //        code block
+    //}
+    //for while do while 与c/c++相同
+    //break continue 与c/c++相同
+
+
+    //数组
+    var arr=[1,2,3,4,5];//隐式创建
+    console.log(arr);//[1,2,3,4,5]
+    console.log(arr.length);//5
+    var arr = new Array(1,2,3,4,5);//直接实例化
+    var size=5;
+    var arr = new Array(size);//实例化一个长度为size的数组
+    //1.长度可变
+    //2.数组中数据类型任意
+    var arr2 = [1,'a',true];
+    console.log(arr2);//[1,'a',true]\
+    //数组长度通过length属性获取，长度可以任意修改
+    //获取长度 arr.length
+    //设置长度 arr.length=10
+    //通过索引获取数组中的元素，索引可以越界
+    //获取元素 arr[index]
+    //设置元素 arr[index]=value
+    //可以用任意字符串作为索引
+
+    //数组的遍历
+    //for
+    //for(var i=0;i<arr.length;i++){
+    //    console.log(arr[i]);
+    //}
+    //forEach
+    //arr.forEach(function(element,index){
+    //    console.log(element);//element是数组中的元素
+    //    console.log(index);//index是数组中元素的索引
+    //});
+    //for in
+    //for(var key in arr){
+    //    console.log(key);//key是数组中元素的索引
+    //    console.log(arr[key]);//arr[key]是数组中元素
+    //}
+    //for of
+    //for(var item of arr){
+    //    console.log(item);
+    //}
+
+    //数组方法
+
+
+
+</script>
+
+<!-- 引入外部js文件 src路径 charset编码 -->
+<!-- 如果script标签中设置了src属性，则在script标签中写的js代码无效 -->
+<script src=""></script>
+</html>
