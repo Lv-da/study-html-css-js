@@ -183,16 +183,168 @@
     //}
     //for of
     //for(var item of arr){
-    //    console.log(item);
+    //    console.log(item);//item是数组中元素
     //}
+    var arr = new Array(1,2,3,4,5);
+    for(var item of arr){
+        console.log(item);
+    }
+    console.log(arr2.length);//3
 
     //数组方法
+    // push //添加元素到最后
+    // unshift //添加元素到第一个
+    // pop //删除最后一个元素
+    // shift //删除第一个元素
+    // reverse //反转数组
+    // join //将数组转换为字符串
+    // indexOf //查找元素的索引
+    // slice //提取数组的一部分，原数组不发生变化
+    // splice //删除数组的一部分，原数组发生变化
+    // concat //合并数组
+    // sort //排序\
+
+    var arr = [1,2,3,4,5];
+    arr.push(6);
+    console.log(arr);//[1,2,3,4,5,6]
+    arr.unshift(0);
+    console.log(arr);//[0,1,2,3,4,5,6]
+    arr.pop();
+    arr.shift();
+    console.log(arr);//[1,2,3,4,5]
+    var arrstr=arr.join('-');
+    console.log(arrstr);//1-2-3-4-5
+    console.log(arr.indexOf(3));//2
+    var arr2 = arr.slice(1,3);
+    console.log(arr2);//[2,3]
+    arr.splice(1,2,'a','b');
+    console.log(arr);//[1,'a','b',4,5]
+    var arr3 = arr.concat(['c','d']);
+    console.log(arr3);//[1,'a','b',4,5,'c','d']
 
 
+    //函数
+    //函数声明语句
+    //funcname();
+    //function funcname(parameter){
+    //    code block
+    //}
+    function func(){
+        console.log('hello world');
+    }
+    //函数表达式
+    //var funcname=function(parameter){
+    //    code block
+    //}
+    //funcname();
+    var func2=function(a,b){
+        return a+b;
+    }
+    //Function构造函数
+    //var funcname=new Function(parameter,code block);
+    //funcname();
+    var funcname=new Function('a','b','var c=a+b;return c;');
+    
+    //如果使用函数声明语句这种方式声明函数，会具有函数提升的效果
+    //js钟方法没有重载，如果函数名称相同，后面的函数会覆盖前面的函数
 
+    //函数的参数
+    //实参可以省略，默认为undefined
+    function add(a,b){
+        console.log(a+b);
+    }
+    add(1,2);//3
+    add(3,4,5);//7
+    add(1);//1+undefined=NaN
+    add();//undefined+undefined=NaN
+    //形参同名则使用时以最后一个为准
+    function add2(a,a){
+        console.log(a);
+    }
+    add2(1,2);//2
+    //形参可以有默认值
+    function add3(a=1,b=2){
+        console.log(a+b);
+    }
+    add3();//3
+    function addx(a){
+        a=a||'a';
+        console.log(a);
+    }
+    addx();//a
+    addx(1);//1
+    //参数为值传递，传递副本，引用传递时传递（对象）地址，操作的是同一个对象
+    var a=1;
+    function add4(a){
+        a=2;
+    }
+    add4(a);//2
+    console.log(a);//1
+    var obj={
+        a:1,
+        name:"zhangsan",
+        test:function(){
+            console.log(this.a);
+        }
+    }
+    function add5(obj){
+        obj.a=2;
+    }
+    add5(obj);//2
+    console.log(obj.a);//2
+
+    //函数的调用
+    //常用：funcname(parameter);
+    //函数调用模式：var sum=add(1,2);console.log(sum);
+    //对象调用模式：obj.funcname(parameter);  //  obj.test();
+    //函数的返回值
+    //return value;//可能有也可能没有
+    //函数的参数
+    //parameter
+       
+    //函数的作用域
+    //js中只有函数有作用域
+    //函数中定义变量时若不加var关键字 使用之后自动变为全局变量
+
+    //函数的this
+    //this指向函数所在的对象
+    //function(){
+    //    console.log(this);
+    //}
+    //谁调用this就指着谁
+
+    //对象 [key:value]
+    var obj={};
+    obj.name='zhangsan';
+
+    var obj={
+        name:'zhangsan',
+    }
+
+    var obj=new Object();
+    obj.name='zhangsan';
+
+    var obj = Object.create(null);
+    obj.name='zhangsan';
+
+    //对象的序列化和反序列化
+    //序列化：JSON.stringify()  将对象转换为字符串
+    //反序列化：JSON.parse()    将字符串转换为对象
+
+
+    console.log('note end');
 </script>
+
+
 
 <!-- 引入外部js文件 src路径 charset编码 -->
 <!-- 如果script标签中设置了src属性，则在script标签中写的js代码无效 -->
 <script src=""></script>
+
+<script>
+    var a="abcd";
+    var b="efgh";
+    var c=a+b+"ijkl";
+    console.log(c);
+</script>
 </html>
